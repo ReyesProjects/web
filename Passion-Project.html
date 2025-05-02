@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Introduction for Coding</title>
+    <style>
+        * {
+            box-sizing: border-box;
+          }
+        
+          body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0; padding: 0;
+            background: #f7f9fc;
+            color: #333;
+            line-height: 1.6;
+          }
+        
+          h1,h2,h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5em;
+          }
+        
+          p {
+            margin-bottom: 1em;
+          }
+        
+          .container {
+            max-width: 960px;
+            margin: auto;
+            padding: 1rem 1.5rem 3rem;
+          }
+        
+          header {
+            background: #2980b9;
+            color: white;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+          }
+        
+          header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+          }
+        
+          header p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-top: 0.5em;
+          }
+        
+          .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 2rem 0 1.5rem;
+            border-bottom: 3px solid #2980b9;
+          }
+        
+          .tab {
+            flex: 1 1 150px;
+            padding: 1em;
+            text-align: center;
+            cursor: pointer;
+            font-weight: 600;
+            color: #555;
+            background: #e1ecf7;
+            border: 3px solid transparent;
+            border-bottom: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            user-select: none;
+          }
+        
+          .tab:hover {
+            background-color: #d0dff5;
+          }
+          
+          .tab.active {
+            color: #fff;
+            background-color: #2980b9;
+            border-color: #2980b9;
+            border-bottom: 3px solid #f7f9fc;
+          }
+        
+          section.content-section {
+            display: none;
+            animation: fadein 0.6s ease forwards;
+            background: white;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 8px 20px rgb(0 0 0 / 0.08);
+          }
+        
+          section.content-section.active {
+            display: block;
+          }
+        
+          .image-holder {
+            margin: 1rem 0;
+            text-align: center;
+          }
+        
+          .image-holder img {
+            max-width: 100%;
+            border-radius: 6px;
+            box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
+          }
+        
+          pre {
+            background: #272822;
+            color: #f8f8f2;
+            padding: 1rem 1.5rem;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            font-size: 0.95rem;
+            margin: 1.5rem 0;
+          }
+        
+          code {
+            font-family: 'Courier New', Courier, monospace;
+          }
+        
+          ul.resources {
+            list-style-type: none;
+            padding-left: 0;
+          }
+        
+          ul.resources li {
+            margin-bottom: 0.6em;
+            font-size: 1.05rem;
+          }
+        
+          ul.resources li a {
+            color: #2980b9;
+            text-decoration: none;
+            border-bottom: 1px dashed #2980b9;
+          }
+        
+          ul.resources li a:hover {
+            color: #1b4f72;
+            border-bottom: 1px solid #1b4f72;
+          }
+        
+          .testimonials {
+            display: flex;
+            gap: 1rem;
+            overflow-x: auto;
+            padding-bottom: 1rem;
+          }
+        
+          .testimonial-card {
+            flex: 0 0 280px;
+            background: #ecf0f1;
+            border-radius: 6px;
+            padding: 1.2rem 1.5rem;
+            box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+        
+          .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: #34495e;
+          }
+        
+          .testimonial-author {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 1rem;
+            text-align: right;
+          }
+        
+          @media (max-width: 600px) {
+            .tabs {
+              flex-direction: column;
+            }
+            .tab {
+              border-bottom: 3px solid #2980b9;
+              border-left: none;
+            }
+            .testimonial-card {
+              flex: 1 1 100%;
+            }
+          }
+        
+          @keyframes fadein {
+            from {opacity: 0;}
+            to {opacity: 1;}
+          }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Learn to Code Here!</h1>
+        <p>A guide for curious young people</p>
+      </header>
+      <div class="container">
+        <nav class="tabs" aria-label="Navegación de secciones">
+          <div class="tab active" data-tab="fundamentos" tabindex="0">Fundaments</div>
+          <div class="tab" data-tab="beneficios" tabindex="0">Benefits</div>
+          <div class="tab" data-tab="aplicaciones" tabindex="0">Applications</div>
+          <div class="tab" data-tab="como-usarla" tabindex="0">How to Use It?</div>
+          <div class="tab" data-tab="ejemplos" tabindex="0">Examples</div>
+          <div class="tab" data-tab="recursos" tabindex="0">Learning Resources</div>
+          <div class="tab" data-tab="testimonios" tabindex="0">Testimonials</div>
+        </nav>
+      
+        <section id="fundamentos" class="content-section active" tabindex="0" aria-live="polite">
+          <h2>Coding Fundamentals</h2>
+          <p>Programming is like giving instructions to a computer to perform specific tasks. It is based on concepts such as variables, conditions, cycles, and functions.</p>
+          <div class="image-holder">
+            <img src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&h=400" alt="Joven programando con entusiasmo"/>
+          </div>
+          <p><strong>Variables:</strong> are spaces where we keep information.</p>
+          <p><strong>Conditions:</strong> allow the program to make decisions.</p>
+          <p><strong>Cycles:</strong>  execute actions repeatedly.</p>
+          <p><strong>Functions:</strong> are blocks that perform specific tasks.</p>
+        </section>
+      
+        <section id="beneficios" class="content-section" tabindex="0" aria-live="polite">
+          <h2>Benefits of Learning to Coding</h2>
+          <p>Coding develops logical and creative skills, improves problem-solving, and opens doors to many job opportunities and personal projects.</p>
+          <div class="image-holder">
+            <img src="https://images.pexels.com/photos/3184356/pexels-photo-3184356.jpeg?auto=compress&cs=tinysrgb&h=400" alt="Jóvenes colaborando con laptops"/>
+          </div>
+          <ul>
+            <li>Improves logical thinking and creativity.</li>
+            <li>Allows you to create your own applications and games.</li>
+            <li>It opens opportunities in the digital era.</li>
+            <li>It helps to understand the technological world around us today.</li>
+          </ul>
+        </section>
+      
+        <section id="aplicaciones" class="content-section" tabindex="0" aria-live="polite">
+          <h2>Real Life Applications</h2>
+          <p>Coding is everywhere: in games, websites, mobile apps, robots, artificial intelligence, and much more.</p>
+          <div class="image-holder">
+            <img src="https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg?auto=compress&cs=tinysrgb&h=400" alt="Ejemplo de apps y robots"/>
+          </div>
+          <ul>
+            <li>Making funny videogames.</li>
+            <li>Develop applications for phones and computers.</li>
+            <li>Automate tasks at home or work.</li>
+            <li>Researching and improving artificial intelligence.</li>
+          </ul>
+        </section>
+      
+        <section id="como-usarla" class="content-section" tabindex="0" aria-live="polite">
+          <h2>How to Use the Coding</h2>
+          <p>To get started, all you need is a computer and a willingness to learn. You can use programming languages like Python, JavaScript or Scratch, depending on what you want to create.</p>
+          <div class="image-holder">
+            <img src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&h=400" alt="Manos usando computadora para programar"/>
+          </div>
+          <p>First learn the basic syntax and then practice with small projects. Programming is a continuous learning process, every mistake is an opportunity to improve!</p>
+        </section>
+      
+        <section id="ejemplos" class="content-section" tabindex="0" aria-live="polite">
+          <h2>Simple Code Examples</h2>
+          <p>Take a look at these examples to understand what a bit of code looks like:</p>
+          <h3>Example in JavaScript: Display a message</h3>
+          <pre><code>console.log(“Hello, world!”);</code></pre>
+      
+          <h3>Example in Python: Adding two numbers</h3>
+          <pre><code>   number1 = 5
+                        number2 = 3
+                        adding = number1 + number2
+                        print("The adding is:", adding)
+      </code></pre>
+      
+          <h3>Scratch visual example</h3>
+          <p>In Scratch, you can also program using blocks, for example, to say “Hello”.</p>
+          <div class="image-holder">
+            <img src="https://images.pexels.com/photos/256417/pexels-photo-256417.jpeg?auto=compress&cs=tinysrgb&h=400" alt="Ejemplo de bloques de Scratch"/>
+          </div>
+        </section>
+      
+        <section id="recursos" class="content-section" tabindex="0" aria-live="polite">
+          <h2>Resources for Learning to Code</h2>
+          <ul class="resources">
+            <li><a href="https://scratch.mit.edu/" target="_blank" rel="noopener">Scratch - Visual programming for beginners</a></li>
+            <li><a href="https://www.codecademy.com/" target="_blank" rel="noopener">Codecademy - Interactive Programming Courses</a></li>
+            <li><a href="https://www.khanacademy.org/computing/computer-programming" target="_blank" rel="noopener">Khan Academy - Introduction to programming</a></li>
+            <li><a href="https://www.freecodecamp.org/learn" target="_blank" rel="noopener">freeCodeCamp - Learn to program with hands-on projects</a></li>
+            <li><a href="https://www.programiz.com/python-programming" target="_blank" rel="noopener">Programiz - Python Tutorials and Examples</a></li>
+          </ul>
+        </section>
+      
+        <section id="testimonios" class="content-section" tabindex="0" aria-live="polite">
+          <h2>Testimonials from Young Programmers</h2>
+          <div class="testimonials" role="list">
+            <article class="testimonial-card" role="listitem">
+              <p class="testimonial-text">"Learning to program opened the door for me to create my own games and share them with my friends, it's great!"</p>
+              <p class="testimonial-author">- Camila, 16 years</p>
+            </article>
+            <article class="testimonial-card" role="listitem">
+              <p class="testimonial-text">"With programming I was able to automate boring tasks on my computer and now I have more time to play."</p>
+              <p class="testimonial-author">- Juan, 15 years</p>
+            </article>
+            <article class="testimonial-card" role="listitem">
+              <p class="testimonial-text">"I love how programming helps me to think logically and creatively. I have created several simple web pages."</p>
+              <p class="testimonial-author">- Sofía, 17 years</p>
+            </article>
+            <article class="testimonial-card" role="listitem">
+              <p class="testimonial-text">"I never thought I could understand code, but with practice and patience, I can now solve problems with programs."</p>
+              <p class="testimonial-author">- Luis, 14 years</p>
+            </article>
+          </div>
+        </section>
+      </div>
+      
+      <script>
+        // Manage tabs navigation & content filter
+        document.addEventListener('DOMContentLoaded', function() {
+          const tabs = document.querySelectorAll('.tab');
+          const sections = document.querySelectorAll('section.content-section');
+      
+          function activateTab(tabElement) {
+            // Deactivate all tabs and sections
+            tabs.forEach(t => t.classList.remove('active'));
+            sections.forEach(s => s.classList.remove('active'));
+      
+            // Activate clicked tab and corresponding section
+            tabElement.classList.add('active');
+            const tabName = tabElement.getAttribute('data-tab');
+            const activeSection = document.getElementById(tabName);
+            if(activeSection) {
+              activeSection.classList.add('active');
+              activeSection.focus();
+            }
+          }
+      
+          tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+              activateTab(tab);
+            });
+            tab.addEventListener('keydown', e => {
+              // Allow keyboard navigation via Enter or Space keys
+              if(e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                activateTab(tab);
+              }
+            });
+          });
+        });
+      </script>
+</body>
+</html>
